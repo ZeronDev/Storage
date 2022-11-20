@@ -1,0 +1,11 @@
+prefix: Storage
+storageUnlocked:
+  name: §6§l창고{slot}
+  lore:
+    - §6§o창고{slot}로 이동합니다
+storageLocked:
+  name: §5§l창고{slot}
+  lore:
+    - §5§o잠겨있습니다
+storageName: 창고{slot}
+storage:

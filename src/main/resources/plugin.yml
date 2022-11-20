@@ -1,0 +1,29 @@
+name: Storage
+version: ${project.version}
+api-version: 1.12
+author: Zeron
+main: me.zeron.storage.MainCore
+permissions:
+  Storage.storage1:
+    description: Storage Plugin
+  Storage.storage2:
+    description: Storage Plugin
+  Storage.storage3:
+    description: Storage Plugin
+  Storage.storage4:
+    description: Storage Plugin
+  Storage.storage5:
+    description: Storage Plugin
+  Storage.storage6:
+    description: Storage Plugin
+  Storage.storage7:
+    description: Storage Plugin
+  Storage.storage8:
+    description: Storage Plugin
+libraries:
+  - io.github.monun:tap-core:4.7.3
+  - io.github.monun:kommand-core:2.14.0
+  - io.github.monun:invfx-core:3.2.0
+  - org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.4
+  - com.github.shynixn.mccoroutine:mccoroutine-bukkit-api:2.6.0
+  - com.github.shynixn.mccoroutine:mccoroutine-bukkit-core:2.6.0
