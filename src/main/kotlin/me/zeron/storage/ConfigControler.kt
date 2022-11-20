@@ -66,6 +66,7 @@ object ConfigControler {
 
             val yaml = YamlConfiguration.loadConfiguration(file)
             for (inv in 1..8) {
+                yaml.set("Storage$inv", null)
                 for (x in 0..8) {
                     for (y in 0..5) {
                         if (entry.value.storageList[inv - 1].item(x, y) != null) {

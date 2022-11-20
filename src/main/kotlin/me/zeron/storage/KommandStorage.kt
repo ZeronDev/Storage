@@ -6,6 +6,7 @@ import io.github.monun.kommand.PluginKommand
 import me.zeron.storage.Data.lockedStorage
 import me.zeron.storage.Data.pane
 import me.zeron.storage.Data.storageMap
+import me.zeron.storage.Data.storageSelectWindowName
 import me.zeron.storage.Data.unlockedStorage
 import me.zeron.storage.MainCore.Companion.plugin
 import net.kyori.adventure.text.Component.text
@@ -27,7 +28,7 @@ object KommandStorage {
             0 to 1, 1 to 1, 2 to 1, 3 to 1, 4 to 1, 5 to 1, 6 to 1, 7 to 1, 8 to 1,
             0 to 2, 2 to 2, 4 to 2, 6 to 2, 8 to 2)
 
-        val storageFrame = frame(3, text("§6창고")) {
+        val storageFrame = frame(3, text(storageSelectWindowName)) {
             slot(1, 0) {
                 if (p.hasPermission("Storage.storage1")) {
                     val unlock = unlockedStorage

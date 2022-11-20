@@ -5,11 +5,9 @@ import io.github.monun.invfx.frame.InvFrame
 import io.github.monun.invfx.openFrame
 import me.zeron.storage.Data.storageMap
 import me.zeron.storage.Data.storageName
-import net.kyori.adventure.key.Key
-import net.kyori.adventure.sound.Sound
-import net.kyori.adventure.sound.Sound.sound
 import net.kyori.adventure.text.Component.text
 import org.bukkit.Bukkit
+import org.bukkit.Sound
 import java.util.*
 
 class Storage {
@@ -24,7 +22,7 @@ class Storage {
                     storageList.removeAt(i-1)
                     storageList.add(i-1, this)
 
-                    Bukkit.getPlayer(UUID.fromString(owner))!!.playSound(sound(Key.key("item_armor_equip_leather"), Sound.Source.PLAYER,0.5f, 1f))
+                    Bukkit.getPlayer(UUID.fromString(owner))!!.playSound(Bukkit.getPlayer(UUID.fromString(owner))!!, Sound.ITEM_ARMOR_EQUIP_LEATHER, 0.5f, 1f)
                     storageMap.put(owner, this@Storage)
                 }
 
@@ -35,7 +33,7 @@ class Storage {
                 }
 
                 onOpen {
-                    Bukkit.getPlayer(UUID.fromString(owner))!!.playSound(sound(Key.key("item_armor_equip_leather"), Sound.Source.PLAYER,0.5f, 1f))
+                    Bukkit.getPlayer(UUID.fromString(owner))!!.playSound(Bukkit.getPlayer(UUID.fromString(owner))!!, Sound.ITEM_ARMOR_EQUIP_LEATHER, 0.5f, 1f)
                 }
             })
         }

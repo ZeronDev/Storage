@@ -11,6 +11,7 @@ import me.zeron.storage.ConfigControler.saveStorageMap
 import me.zeron.storage.ConfigControler.setStorageItemMeta
 import me.zeron.storage.Data.prefix
 import me.zeron.storage.Data.storageMap
+import me.zeron.storage.Data.storageSelectWindowName
 import me.zeron.storage.KommandStorage.kommandStorage
 import org.bukkit.plugin.Plugin
 import org.bukkit.plugin.java.JavaPlugin
@@ -52,12 +53,20 @@ class MainCore : JavaPlugin() {
             }
         }
 
-        logger.info("$prefix 창고 플러그인이 활성화중입니다\n제작자 : ZeronDev")
+        kommand {
+            kommandStorage(this)
+        }
+
+        logger.info("$prefix 창고 플러그인이 활성화중입니다")
+        logger.info("제작자 : ZeronDev")
         logger.info("$prefix CONFIG가 로딩중입니다")
+
+        storageSelectWindowName = config.getString("storage") ?: "§cCONFIG ERROR"
     }
 
     override fun onDisable() {
         logger.info("$prefix 창고 플러그인이 비활성화중입니다\n제작자 : ZeronDev")
+        logger.info("제작자 : ZeronDev")
 
         saveStorageMap()
         saveConfig()

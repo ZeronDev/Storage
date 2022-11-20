@@ -1,6 +1,6 @@
 name: Storage
 version: ${project.version}
-api-version: 1.12
+api-version: 1.19
 author: Zeron
 main: me.zeron.storage.MainCore
 permissions:

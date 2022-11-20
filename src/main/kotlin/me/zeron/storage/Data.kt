@@ -14,4 +14,5 @@ object Data {
     var storageName: String = "창고{slot}"
     val storageMap: MutableMap<String, Storage> = mutableMapOf() //UUID
     val storageDirectory: File = File(plugin.dataFolder, "StorageFiles")
+    var storageSelectWindowName: String = "창고"
 }
